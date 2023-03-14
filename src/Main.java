@@ -21,6 +21,6 @@ public class Main {
 
         book1.setYear(1120);
         System.out.println("book1.year = " + book1.year);
-        System.out.println("book2.author = " + book2.getAuthor());
+        System.out.println("book2.author = " + book2.authorName);
     }
 }

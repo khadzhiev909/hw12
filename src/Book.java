@@ -1,12 +1,12 @@
 public class Book {
     String name;
-    String authorName;
+    Author authorName;
     int year;
 
     public Book(String name, Author authorName, int year) {
         this.year = year;
         this.name = name;
-        this.authorName = authorName.toString();
+        this.authorName = authorName;
     }
 
     public String getTatle() {
@@ -19,7 +19,7 @@ public class Book {
     public int getYear() {
         return this.year;
     }
-    public String getAuthor() {
+    public Author getAuthor() {
         return this.authorName;
     }
     //Создайте сеттер для поля «Год публикации» у книги.
