@@ -1,7 +1,7 @@
 public class Author {
-    String name;
-    String surName;
-    String patronymic;
+    private String name;
+    private String surName;
+    private String patronymic;
 
     public Author (String name, String surName, String patronymic) {
         this.name = name;
