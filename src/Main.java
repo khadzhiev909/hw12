@@ -20,7 +20,7 @@ public class Main {
         //В том же методе main измените год публикации одной из книг с помощью сеттера.
 
         book1.setYear(1120);
-        System.out.println("book1.year = " + book1.year);
-        System.out.println("book2.author = " + book2.author);
+        System.out.println("book1.year = " + book1.getYear());
+        System.out.println("book2.author = " + book2.getAuthor());
     }
 }
