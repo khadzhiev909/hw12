@@ -29,7 +29,6 @@ public class Author {
     public String toString() {
         return "lastName: " + lasName + ", firstName: " + firstName;
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(lasName, firstName);

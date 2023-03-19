@@ -44,5 +44,8 @@ public class Book {
         return year == book.year && Objects.equals(name, book.name) && Objects.equals(author, book.author);
     }
 
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, author, year);
+    }
 }
