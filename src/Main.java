@@ -7,8 +7,8 @@ public class Main {
 
 
         //author
-        Author author = new Author("Лев", "Толстой", "Николаевич");
-        Author author2 = new Author("Гузель", "Яхина", "Шамилевна");
+        Author author = new Author("Лев", "Толстой");
+        Author author2 = new Author("Гузель", "Яхина");
 
         //book
 
@@ -20,7 +20,13 @@ public class Main {
         //В том же методе main измените год публикации одной из книг с помощью сеттера.
 
         book1.setYear(1120);
+        System.out.println(book1.toString());
         System.out.println("book1.year = " + book1.getYear());
         System.out.println("book2.author = " + book2.getAuthor());
     }
 }
+
+
+//Реализуйте методы toString, equals и hashCode в классах Author и Book, которые вы создали на прошлом уроке.
+//
+//Обратите внимание, что toString книги не должен дублировать код из toString автора, а должен делегировать (вызывать) его версию метода

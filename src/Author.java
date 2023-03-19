@@ -1,22 +1,46 @@
-public class Author {
-    private String name;
-    private String surName;
-    private String patronymic;
+import java.util.Objects;
 
-    public Author (String name, String surName, String patronymic) {
-        this.name = name;
-        this.surName = surName;
-        this.patronymic = patronymic;
+public class Author {
+    private String lasName;
+    private String firstName;
+
+    public Author (String lasName, String firstName) {
+        this.lasName = lasName;
+        this.firstName = firstName;
     }
+
     // Создайте геттер для всех полей
-    private String getName() {
-        return this.name;
+    public String getLastName() {
+        return this.lasName;
     }
-    private String getSurName() {
-        return this.surName;
+    public String getFirstName() {
+        return this.firstName;
     }
-    private String getPatronymic() {
-        return this.patronymic;
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName.toUpperCase();
+    }
+
+    public void setLasName(String lasName) {
+        this.lasName = lasName;
+    }
+
+    @Override
+    public String toString() {
+        return "lastName: " + lasName + ", firstName: " + firstName;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(lasName, firstName);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Objects.equals(lasName, author.lasName) && Objects.equals(firstName, author.firstName);
     }
 }
 
